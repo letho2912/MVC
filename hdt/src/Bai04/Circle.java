@@ -9,7 +9,7 @@ package Bai04;
  *
  * @author OS
  */
-public class Circle {
+public class Circle extends Shape{
 
     private int radius, x, y;
 
@@ -22,14 +22,22 @@ public class Circle {
         this.y = y;
     }
 
-    public double cv() {
+    @Override
+    public double cv(){
         double kq = 2 * Math.PI * this.radius;
         return kq;
     }
 
+    @Override
     public double dt() {
         double kq = (Math.PI) * this.radius * this.radius;
         return kq;
+    }
+
+    @Override
+    public String toString() {
+       String output="\n Diện tích hình tròn là: "+cv()+"\nChu vi hình tròn là: "+dt();
+        return output;
     }
 
     public int getRadius() {

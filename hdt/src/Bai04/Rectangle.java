@@ -9,7 +9,7 @@ package Bai04;
  *
  * @author OS
  */
-public class Rectangle {
+public class Rectangle extends Shape {
 
     private int upper_x, upper_y, lover_x, lover_y;
 
@@ -23,12 +23,21 @@ public class Rectangle {
         this.lover_y = lover_y;
     }
 
+    @Override
     public double cv() {
         return (2 * Math.abs(upper_x - lover_x) + (2 * Math.abs(upper_y - lover_y)));
     }
 
+    @Override
     public double dt() {
         return Math.abs(upper_x - lover_x) * (upper_y - lover_y);
+    }
+
+    @Override
+    public String toString() {
+        String output = "Chu vi hình chữ nhật là: " + cv() + "\n"
+                + "Diện tích là: " + dt();
+        return output;
     }
 
     public int getUpper_x() {
@@ -62,5 +71,5 @@ public class Rectangle {
     public void setLover_y(int lover_y) {
         this.lover_y = lover_y;
     }
-    
+
 }

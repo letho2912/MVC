@@ -32,7 +32,7 @@ public class StudentView {
         float age = Float.parseFloat(sc.nextLine());
         System.out.println("Phone: ");
         String phone = sc.nextLine();
-        Student sv = new Student(fullname, age,phone);
+        Student sv = new Student(fullname, age, phone);
         System.out.println("Finished");
         System.out.println("++++++++++++++++++++++++++++++++++");
         System.out.println("++++++++++++++++++++++++++++++++++");
@@ -65,19 +65,24 @@ public class StudentView {
         System.out.println("++++++++++++++++++++++++++++++++++");
     }
 
-    public void tim_sv_theo_sdt(ArrayList<Student> students) {
-      Scanner tam=new Scanner(System.in);
-        System.out.println("Nhập số điện thoại cần tìm: ");
-        String sdt=tam.nextLine();
-        for (Student student : students) {
-            
-       if(student.getPhone().equals(sdt)){
-           System.out.println("Có tồn tại");
-       } else{
-           System.out.println("Không tồn tại");
-       }
-               }
-        
-     
+   
+    public String nhapSDT(){
+         System.out.println("=======================");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập số điện thoại cần tìm kiếm: ");
+        String sdt = sc.nextLine();
+        return sdt;
+    }
+    public void kq_timkiem(ArrayList<Student> students) {
+       if (students.isEmpty()) {
+            System.out.println("Không tìm thấy");
+        } else {
+            for (Student sv : students) {
+                System.out.println("++++ " + sv.toString() + " ++++");
+            }
+            // System.out.println(students.get(kq+1).getFullname(),students.get(kq+1).getAge(),students.get(kq+1).getPhone());
+
+        }
+        System.out.println("=======================");
     }
 }

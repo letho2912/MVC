@@ -18,34 +18,14 @@ public class StudentMVC {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-int luachon;
-do {
-	            luachon = menu();
-	        	switch (luachon) {
-	        	case 1: 
-	        		kich_ban_1();
-	        		break;
-	            case 2: 
-	            	kich_ban_2();
-	               break;
-	            case 0:
-	               break;
-	            default:
-	            	System.out.println("Mời bạn chọn lại!!!!");
-	        	}  
-	        }while (luachon!=0);
-	        System.out.println("Bạn đã thoát thành công");
+        kich_ban_3();
 
     }
 
-    public static int menu() {
-        System.out.println("\n =========MENU=========");
-        System.out.println("1. Kịch bản 1");
-        System.out.println("2. Kịch bản 2 ");
-       System.out.println("0. Thoát");
-        Scanner nhap = new Scanner(System.in);
-        int Chon = nhap.nextInt();
-        return Chon;
+    public static void kich_ban_3() {
+        MenuController menu = new MenuController(new StudentController(new StudentView()),
+                new MenuView());
+        menu.lua_chon();
     }
 
     public static void kich_ban_1() {

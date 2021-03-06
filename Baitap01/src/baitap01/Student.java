@@ -50,7 +50,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Danh sách sinh viên là:{" + "\nHọ và tên:" + fullname + "\n Tuổi:" + age + "\n Số điện thoại: " + phone + '}';
+        return "Danh sách sinh viên là:" + "\nHọ và tên:" + fullname + "\n Tuổi:" + age + "\n Số điện thoại: " + phone ;
     }
 
 }

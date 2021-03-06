@@ -48,7 +48,21 @@ public class StudentController {
         this.view.hien_thi_danh_sach_sinh_vien(this.students);
     }
 
+    private ArrayList<Student> tim_sv_theo_sdt(ArrayList<Student> students, String sdt) {
+        ArrayList<Student> result = new ArrayList<>();
+
+        for (Student student : students) {
+            if (student.getPhone().contains(sdt)) {
+                result.add(student);
+            }
+
+        }
+        return result;
+    }
+
     public void tim_kiem_sv_theo_sdt() {
-        this.view.tim_sv_theo_sdt(this.students);
+        String sdt=this.view.nhapSDT();
+        ArrayList<Student> kq=tim_sv_theo_sdt(students, sdt);
+        this.view.kq_timkiem(kq);
     }
 }

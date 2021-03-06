@@ -41,7 +41,7 @@ public class MenuController {
 //                sc.them_sv();
 //                sc.hienthisaukhithem();
                 break;
-            case 0:
+            case 4:
                 break;
             default:
                 System.out.println("Mời bạn chọn lại!!!!");

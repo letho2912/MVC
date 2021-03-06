@@ -47,8 +47,7 @@ public class StudentNewView {
             String answer = sc.nextLine();
             if ("Khong".equals(answer) || "khong".equals(answer)) {
                 flag = false;
-                MenuView mn=new MenuView();
-                mn.menu();
+               
             } else {
                 Student sv = nhap_du_lieu_mot_sinh_vien();
                 result.add(sv);

@@ -23,8 +23,10 @@ public class MenuController {
     }
 
     public void lua_chon() {
-        int kq = mnView.menu();
+        int kq;
         StudentNewController sc = new StudentNewController(new StudentNewView());
+        do{
+            kq= mnView.menu();
         switch (kq) {
             case 1:
                 sc.nhap_danh_sach_sinh_vien();
@@ -39,11 +41,14 @@ public class MenuController {
 //                sc.them_sv();
 //                sc.hienthisaukhithem();
                 break;
-            case 4:
+            case 0:
                 break;
             default:
                 System.out.println("Mời bạn chọn lại!!!!");
-        }
+        }}
+        while(kq!=0);
+        System.out.println("Bạn đã thoát thành công");
+        
     }
 
 }
